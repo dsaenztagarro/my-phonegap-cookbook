@@ -1,11 +1,12 @@
 DEPENDENCIES
-  java
   my-environment
     path: ../my-environment
-  nodejs
-  phonegap
+  my-phonegap
     path: .
     metadata: true
+  phonegap
+    git: git://github.com/dsaenztagarro/phonegap-cookbook.git
+    revision: e1e488e0c2ffb9869c960e884c79b0edbf644f4e
   rvm
 
 GRAPH
@@ -26,15 +27,17 @@ GRAPH
     apt (>= 0.0.0)
     git (>= 0.0.0)
     vim (>= 0.0.0)
+  my-phonegap (0.1.0)
+    my-environment (>= 0.0.0)
+    phonegap (>= 0.0.0)
+    rvm (>= 0.0.0)
   nodejs (1.3.0)
     apt (>= 0.0.0)
     build-essential (>= 0.0.0)
     yum (>= 0.0.0)
   phonegap (0.1.0)
     java (>= 0.0.0)
-    my-environment (>= 0.0.0)
     nodejs (>= 0.0.0)
-    rvm (>= 0.0.0)
   runit (1.5.10)
     build-essential (>= 0.0.0)
     yum (~> 3.0)
