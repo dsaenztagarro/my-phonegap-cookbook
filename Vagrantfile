@@ -34,9 +34,16 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # USB support requires on host machine execute command:
   # VBoxManage extpack install <Oracle_Virtualbox_extension_pack>
+  # Parameters: https://www.virtualbox.org/manual/ch08.html
   config.vm.provider :virtualbox do |vb|
     vb.name = "phonegap-vm"
-    vb.memory = 3072
+    # RAM
+    vb.customize ["modifyvm", :id, "--memory", "3072"]
+    # Video memory
+    vb.customize ["modifyvm", :id, "--vram", "32"]
+    # Number os cpus
+    vb.customize ["modifyvm", :id, "--cpus", "4"]
+    # Usb settings
     vb.customize ["modifyvm", :id, "--usb", "on"]
     vb.customize ["modifyvm", :id, "--usbehci", "on"]
     # Sony Ericsson
