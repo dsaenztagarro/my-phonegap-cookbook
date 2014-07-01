@@ -1,1 +1,0 @@
-{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/dst/Development/projects/cookbooks/phonegap"},"v-csc-1":{"id":"v-csc-1","guestpath":"/tmp/vagrant-chef-3/chef-solo-1/cookbooks","hostpath":"/Users/dst/.berkshelf/default/vagrant/berkshelf-20140611-1119-12xqhoe-default"}}}
