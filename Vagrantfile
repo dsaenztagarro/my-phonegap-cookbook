@@ -46,12 +46,23 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # Usb settings
     vb.customize ["modifyvm", :id, "--usb", "on"]
     vb.customize ["modifyvm", :id, "--usbehci", "on"]
+
+    # Adding devices
+    # Command: VBoxManage list usbhost
+
     # Sony Ericsson
     vb.customize ['usbfilter', 'add', '0',
       '--target', :id,
       '--name', 'Sony Ericsson',
       '--vendorid', '0x0fce',
       '--productid', '0x5156']
+
+    # Motorola G
+    vb.customize ['usbfilter', 'add', '1',
+      '--target', :id,
+      '--name', 'Motorola G',
+      '--vendorid', '0x22b8',
+      '--productid', '0x2e76']
   end
 
   config.berkshelf.enabled = true
